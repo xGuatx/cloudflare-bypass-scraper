@@ -1,0 +1,50 @@
+services:
+  # Service API HTTP (mode recommande pour integration)
+  api:
+    build: .
+    container_name: cloudflare_bypass_api
+    working_dir: /app
+    ports:
+      - "3001:3001"
+    volumes:
+      - ./screenshots:/tmp/screenshots
+      - ./logs:/tmp/logs
+    environment:
+      - NODE_ENV=production
+      - PORT=3001
+    cap_add:
+      - SYS_ADMIN
+    networks:
+      - bypass_net
+    restart: unless-stopped
+    command: ["node", "server.js"]
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3001/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+
+  # Service CLI (mode batch/one-shot)
+  cli:
+    build: .
+    container_name: cloudflare_bypass_cli
+    working_dir: /app
+    volumes:
+      - ./screenshots:/tmp/screenshots
+      - ./logs:/tmp/logs
+    environment:
+      - NODE_ENV=production
+    cap_add:
+      - SYS_ADMIN
+    networks:
+      - bypass_net
+    restart: "no"
+    profiles:
+      - cli
+    command: ["node", "main.js"]
+
+networks:
+  bypass_net:
+    driver: bridge
+

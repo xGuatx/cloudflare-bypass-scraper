@@ -1,0 +1,141 @@
+test) snf-screenshot@srv-screenshot:~/playwright_bypassCloudflare$ python3 test2.py https://anygoo.net/redirect.html?u=https%3A%2F%2Ftear6604%2Ebrightsphere%2Eza%2Ecom%2FYB7MDstcRbL%2F%23Dtest@test.test
+
+[+] URL analysée → https://tear6604.brightsphere.za.com/YB7MDstcRbL/#Dtest@test.test
+
+[!] Timeout networkidle
+
+[~] Recherche dynamique de l'iframe Turnstile...
+
+[!] Échec : iframe Turnstile introuvable ou case non cliquable.
+
+[!] Aucun token détecté dans le champ Turnstile.
+
+ 
+
+[=] Final URL : https://tear6604.brightsphere.za.com/YB7MDstcRbL/#Dtest@test.test
+
+[=] Title     : Access Verification
+
+[=] Screenshot enregistré : cf_result.png
+
+ 
+
+[=] HTML extrait (1200 char) :
+
+<!DOCTYPE html><html lang="en"><head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="robots" content="noindex, nofollow">
+
+    <meta http-equiv="X-Robots-Tag" content="noindex, nofollow">
+
+    <script src=https://challenges.cloudflare.com/turnstile/v0/api.js></script>
+
+        <title>Access Verification</title>
+
+</head>
+
+<body style="font-family: -apple-system, BlinkMacSystemFont, sans-serif; margin: 90px 0; display: flex; justify-content: center;">
+
+    <form method="POST" action="" style="text-align: center;">
+
+        <div class="cf-turnstile" data-sitekey="0x4AAAAAABq32a6WDz6Vde_N" data-callback="welter"><div><input type="hidden" name="cf-turnstile-response" id="cf-chl-widget-uxgad_response" style=""></div></div>
+
+    </form>
+
+    <script>
+
+        function welter(token) {
+
+            document.forms[0].submit();
+
+        }
+
+    </script>
+
+ 
+
+</body></html>
+
+ 
+
+[=] Logs réseau :
+
+>> GET https://tear6604.brightsphere.za.com/YB7MDstcRbL/
+
+<< 200 https://tear6604.brightsphere.za.com/YB7MDstcRbL/
+
+>> GET https://challenges.cloudflare.com/turnstile/v0/api.js
+
+<< 302 https://challenges.cloudflare.com/turnstile/v0/api.js
+
+>> GET https://challenges.cloudflare.com/turnstile/v0/b/4710d66e8fda/api.js
+
+<< 200 https://challenges.cloudflare.com/turnstile/v0/b/4710d66e8fda/api.js
+
+>> GET https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/if/ov2/av0/rcv/uxgad/0x4AAAAAABq32a6WDz6Vde_N/auto/fbE/new/normal/auto/
+
+<< 200 https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/if/ov2/av0/rcv/uxgad/0x4AAAAAABq32a6WDz6Vde_N/auto/fbE/new/normal/auto/
+
+>> GET https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/cmg/1
+
+>> GET https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/orchestrate/chl_api/v1?ray=9795e3776f587879&lang=auto
+
+<< 200 https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/cmg/1
+
+<< 200 https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/orchestrate/chl_api/v1?ray=9795e3776f587879&lang=auto
+
+>> GET blob:https://challenges.cloudflare.com/02bd6671-d6d7-4507-a3a4-8841a20b5a3f
+
+>> POST https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/flow/ov1/53816568:1756906996:S_1uVCh3t1jKXyCRH_BRhd3sdgFx4WF-sbcLwB9bqak/9795e3776f587879/cDy1eDwKKymMd5gfcq57fZTWCjlS0LnxaAQJtwYB18c-1756909233-1.2.1.1-qh1ARvQJmhR3KI7f8.UhGMMD1.Q19hWY1PHv9Nagpdk33.s77fJvJEvDelxj2fjR
+
+<< 200 https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/flow/ov1/53816568:1756906996:S_1uVCh3t1jKXyCRH_BRhd3sdgFx4WF-sbcLwB9bqak/9795e3776f587879/cDy1eDwKKymMd5gfcq57fZTWCjlS0LnxaAQJtwYB18c-1756909233-1.2.1.1-qh1ARvQJmhR3KI7f8.UhGMMD1.Q19hWY1PHv9Nagpdk33.s77fJvJEvDelxj2fjR
+
+>> GET blob:https://challenges.cloudflare.com/f3783ae8-a00c-4490-b1e7-c3a3a3afbe03
+
+<< 200 blob:https://challenges.cloudflare.com/f3783ae8-a00c-4490-b1e7-c3a3a3afbe03
+
+>> GET blob:https://challenges.cloudflare.com/69dbd965-5610-4aba-aa71-134f19fb39d6
+
+>> GET blob:https://challenges.cloudflare.com/69dbd965-5610-4aba-aa71-134f19fb39d6
+
+<< 200 blob:https://challenges.cloudflare.com/69dbd965-5610-4aba-aa71-134f19fb39d6
+
+<< 200 blob:https://challenges.cloudflare.com/69dbd965-5610-4aba-aa71-134f19fb39d6
+
+>> GET blob:https://challenges.cloudflare.com/69dbd965-5610-4aba-aa71-134f19fb39d6
+
+<< 200 blob:https://challenges.cloudflare.com/69dbd965-5610-4aba-aa71-134f19fb39d6
+
+>> GET https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/pat/9795e3776f587879/1756909234133/9274b51dd2aff02e175dd6533b3363382f8bbf8d0b5ee85ebb626bb71eb7603c/7LEoJKPqYAoc0sK
+
+<< 401 https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/pat/9795e3776f587879/1756909234133/9274b51dd2aff02e175dd6533b3363382f8bbf8d0b5ee85ebb626bb71eb7603c/7LEoJKPqYAoc0sK
+
+>> GET blob:https://challenges.cloudflare.com/69dbd965-5610-4aba-aa71-134f19fb39d6
+
+<< 200 blob:https://challenges.cloudflare.com/69dbd965-5610-4aba-aa71-134f19fb39d6
+
+>> GET https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/d/9795e3776f587879/1756909234135/uyUDyI2V-1uHYqW
+
+<< 200 https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/d/9795e3776f587879/1756909234135/uyUDyI2V-1uHYqW
+
+>> POST https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/flow/ov1/53816568:1756906996:S_1uVCh3t1jKXyCRH_BRhd3sdgFx4WF-sbcLwB9bqak/9795e3776f587879/cDy1eDwKKymMd5gfcq57fZTWCjlS0LnxaAQJtwYB18c-1756909233-1.2.1.1-qh1ARvQJmhR3KI7f8.UhGMMD1.Q19hWY1PHv9Nagpdk33.s77fJvJEvDelxj2fjR
+
+>> GET blob:https://challenges.cloudflare.com/946d12ec-60b1-420d-b497-1200c6c55773
+
+<< 200 https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/flow/ov1/53816568:1756906996:S_1uVCh3t1jKXyCRH_BRhd3sdgFx4WF-sbcLwB9bqak/9795e3776f587879/cDy1eDwKKymMd5gfcq57fZTWCjlS0LnxaAQJtwYB18c-1756909233-1.2.1.1-qh1ARvQJmhR3KI7f8.UhGMMD1.Q19hWY1PHv9Nagpdk33.s77fJvJEvDelxj2fjR
+
+<< 200 blob:https://challenges.cloudflare.com/946d12ec-60b1-420d-b497-1200c6c55773
+
+(test) snf-screenshot@srv-screenshot:~/playwright_bypassCloudflare
+
+ 
+
+ 
+
+python3 test2.py https://anygoo.net/redirect.html?u=https%3A%2F%2Ftear6604%2Ebrightsphere%2Eza%2Ecom%2FYB7MDstcRbL%2F%23Dtest@test.test
+
+ 
